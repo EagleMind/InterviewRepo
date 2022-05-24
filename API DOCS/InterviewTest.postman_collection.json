@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "aa1ce0f6-5891-4201-8945-652d0e12912e",
+		"name": "InterviewTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "10752584"
+	},
+	"item": [
+		{
+			"name": "generateToken",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:4000/users"
+			},
+			"response": []
+		}
+	]
+}

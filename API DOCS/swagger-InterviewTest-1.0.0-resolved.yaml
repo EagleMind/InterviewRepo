@@ -1,0 +1,86 @@
+---
+openapi: 3.0.0
+info:
+  title: InterviewTest Api
+  description: InterviewTest Api
+  contact:
+    email: hassen.ben.mbarek@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/personal1156/InterviewTest/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /getAllUsers:
+    get:
+      summary: get all users
+      description: Get all users
+      responses:
+        "200":
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/getAllUsers'
+        "400":
+          description: bad input parameter
+  /generateToken:
+    post:
+      summary: Generates user tokens
+      parameters:
+      - name: user_id
+        in: query
+        description: user id to generate token for
+        required: false
+        style: form
+        explode: true
+        schema:
+          $ref: '#/components/schemas/generateToken'
+      responses:
+        "200":
+          description: OK
+components:
+  schemas:
+    getAllUsers:
+      required:
+      - bearer_token
+      - createdat
+      - email
+      - lastname
+      - name
+      - updatedat
+      - user_id
+      - validated
+      - validation_date
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+          example: Hassen
+        lastname:
+          type: string
+          example: Hassen Ben Mbarek
+        validate:
+          type: boolean
+          example: true
+        validation_date:
+          type: string
+          format: date-time
+          example: 2016-08-29T09:12:33.001Z
+        createdat: {}
+    generateToken:
+      required:
+      - user_id
+      type: object
+      properties:
+        user_id:
+          type: integer
+          format: uuid
+          example: 1
