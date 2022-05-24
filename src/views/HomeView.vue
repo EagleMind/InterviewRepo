@@ -54,8 +54,6 @@ export default {
     return {
       users: [],
       token: null,
-      // tokenExpired: true,
-      log: console.log,
     };
   },
   methods: {
@@ -99,12 +97,6 @@ export default {
 
   mounted() {
     this.getUsers();
-    // Calculating time difference in front as we don't have any indicator of an expiration date in the backend in this case (no column in the DB nor a jwtVerification api//
-    // this.users.map((el) => {
-    //   if (Math.floor(Date.parse(el.updated_at) - Date.now() / 10000) <= 60000) {
-    //     this.tokenExpired = true;
-    //   }
-    // });
   },
 };
 </script>
