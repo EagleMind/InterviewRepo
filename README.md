@@ -1,35 +1,8 @@
-# interviewTest
+# NOTE
 
-This template should help get you started developing with Vue 3 in Vite.
+- Le brief n'était pas clair et pouvait contenir des erreurs, et comme j'ai commencé tard, je n'ai pas eu le temps de demander des clarifications, donc j'ai fait de mon mieux.
 
-## Recommended IDE Setup
+- Je n'ai pas fait la dernière tâche:
+il est posible de régénérer un token aprés expiration.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Pour ce faire, nous avons besoin d'une autre API pour vérifier la validité du token et l'appeler dans onMount() pour que les bouttons change de disable a enabled.
